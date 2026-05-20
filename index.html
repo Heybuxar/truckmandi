@@ -20,6 +20,8 @@
     --green: #25D366;
     --green-dark: #1aab52;
     --gold: #FFB800;
+    --blue: #1565C0;
+    --blue-dark: #0d47a1;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -41,23 +43,12 @@
     display: flex; align-items: center; justify-content: space-between;
   }
   .logo-wrap { display: flex; align-items: center; gap: 10px; }
-  .logo-icon {
-    width: 42px; height: 42px;
-    background: var(--orange);
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 22px;
-  }
+  .logo-icon { width: 42px; height: 42px; background: var(--orange); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 22px; }
   .logo-text { line-height: 1; }
   .logo-text .brand { font-family: 'Bebas Neue', sans-serif; font-size: 26px; color: var(--white); letter-spacing: 2px; }
   .logo-text .brand span { color: var(--orange); }
   .logo-text .sub { font-size: 9px; color: var(--gray); letter-spacing: 1.5px; text-transform: uppercase; }
-  .nav-call {
-    display: flex; align-items: center; gap: 8px;
-    background: var(--orange); color: var(--white);
-    text-decoration: none; padding: 8px 16px;
-    border-radius: 6px; font-weight: 700; font-size: 14px; transition: background 0.2s;
-  }
+  .nav-call { display: flex; align-items: center; gap: 8px; background: var(--orange); color: var(--white); text-decoration: none; padding: 8px 16px; border-radius: 6px; font-weight: 700; font-size: 14px; transition: background 0.2s; }
   .nav-call:hover { background: var(--orange-dark); }
 
   /* ── HERO ── */
@@ -75,50 +66,23 @@
     background-image: linear-gradient(rgba(255,107,0,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,107,0,0.06) 1px, transparent 1px);
     background-size: 60px 60px;
   }
-  .hero-content {
-    position: relative; z-index: 1;
-    max-width: 700px; padding: 60px 24px 80px;
-    margin: 0 auto 0 5%;
-    animation: fadeUp 0.9s ease both;
-  }
+  .hero-content { position: relative; z-index: 1; max-width: 700px; padding: 60px 24px 80px; margin: 0 auto 0 5%; animation: fadeUp 0.9s ease both; }
   @keyframes fadeUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
-  .hero-badge {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: rgba(255,107,0,0.15); border: 1px solid rgba(255,107,0,0.4);
-    color: var(--orange-light); padding: 6px 14px; border-radius: 50px;
-    font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px;
-  }
+  .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,107,0,0.15); border: 1px solid rgba(255,107,0,0.4); color: var(--orange-light); padding: 6px 14px; border-radius: 50px; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px; }
   .hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(46px, 8vw, 80px); line-height: 1; letter-spacing: 2px; margin-bottom: 16px; }
   .hero h1 span { color: var(--orange); }
   .hero-sub { font-size: clamp(16px, 2.5vw, 20px); color: #c5cdd8; margin-bottom: 28px; font-weight: 500; }
   .hero-checks { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 36px; }
-  .hero-check {
-    display: flex; align-items: center; gap: 6px;
-    background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
-    padding: 7px 14px; border-radius: 6px; font-size: 14px; font-weight: 600;
-  }
+  .hero-check { display: flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); padding: 7px 14px; border-radius: 6px; font-size: 14px; font-weight: 600; }
   .hero-check .tick { color: var(--orange); font-size: 16px; }
   .hero-btns { display: flex; flex-wrap: wrap; gap: 14px; }
-  .btn-sell {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: var(--green); color: var(--white); text-decoration: none;
-    padding: 16px 32px; border-radius: 8px; font-size: 17px; font-weight: 700;
-    transition: all 0.2s; box-shadow: 0 4px 20px rgba(37,211,102,0.35);
-  }
+  .btn-sell { display: inline-flex; align-items: center; gap: 8px; background: var(--green); color: var(--white); text-decoration: none; padding: 16px 32px; border-radius: 8px; font-size: 17px; font-weight: 700; transition: all 0.2s; box-shadow: 0 4px 20px rgba(37,211,102,0.35); }
   .btn-sell:hover { background: var(--green-dark); transform: translateY(-2px); }
-  .btn-buy {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: transparent; color: var(--white); text-decoration: none;
-    padding: 16px 32px; border-radius: 8px; font-size: 17px; font-weight: 700;
-    border: 2px solid var(--orange); transition: all 0.2s;
-  }
+  .btn-buy { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--white); text-decoration: none; padding: 16px 32px; border-radius: 8px; font-size: 17px; font-weight: 700; border: 2px solid var(--orange); transition: all 0.2s; }
   .btn-buy:hover { background: var(--orange); transform: translateY(-2px); }
 
   /* STATS */
-  .stats-bar {
-    position: relative; z-index: 2; background: var(--orange);
-    padding: 18px 20px; display: flex; justify-content: center; flex-wrap: wrap; gap: 0;
-  }
+  .stats-bar { position: relative; z-index: 2; background: var(--orange); padding: 18px 20px; display: flex; justify-content: center; flex-wrap: wrap; gap: 0; }
   .stat-item { flex: 1; min-width: 140px; text-align: center; padding: 8px 20px; border-right: 1px solid rgba(255,255,255,0.3); }
   .stat-item:last-child { border-right: none; }
   .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 32px; line-height: 1; color: var(--white); }
@@ -133,19 +97,9 @@
 
   /* VERIFICATION */
   .verify-section { background: var(--dark2); }
-  .verify-card {
-    max-width: 820px; margin: 0 auto;
-    background: linear-gradient(135deg, #1e2830, #111820);
-    border: 1px solid rgba(255,107,0,0.3); border-radius: 20px;
-    padding: 48px 36px; display: flex; flex-wrap: wrap; gap: 36px; align-items: center;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-  }
+  .verify-card { max-width: 820px; margin: 0 auto; background: linear-gradient(135deg, #1e2830, #111820); border: 1px solid rgba(255,107,0,0.3); border-radius: 20px; padding: 48px 36px; display: flex; flex-wrap: wrap; gap: 36px; align-items: center; box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
   .verify-left { flex: 1; min-width: 240px; }
-  .price-badge {
-    display: inline-block; background: var(--orange); color: var(--white);
-    font-family: 'Bebas Neue', sans-serif; font-size: 56px;
-    padding: 10px 24px; border-radius: 12px; line-height: 1; margin-bottom: 16px; letter-spacing: 2px;
-  }
+  .price-badge { display: inline-block; background: var(--orange); color: var(--white); font-family: 'Bebas Neue', sans-serif; font-size: 56px; padding: 10px 24px; border-radius: 12px; line-height: 1; margin-bottom: 16px; letter-spacing: 2px; }
   .verify-left h3 { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 1.5px; margin-bottom: 8px; }
   .verify-left p { color: var(--gray); font-size: 15px; line-height: 1.6; }
   .verify-right { flex: 1; min-width: 220px; }
@@ -153,23 +107,13 @@
   .verify-benefits li { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 16px; font-weight: 600; }
   .verify-benefits li:last-child { border-bottom: none; }
   .verify-benefits .icon { width: 30px; height: 30px; background: rgba(255,107,0,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; color: var(--orange); flex-shrink: 0; }
-  .btn-verify {
-    display: flex; align-items: center; justify-content: center; gap: 8px;
-    background: var(--orange); color: var(--white); text-decoration: none;
-    padding: 16px 28px; border-radius: 8px; font-size: 18px; font-weight: 700;
-    transition: all 0.2s; box-shadow: 0 4px 20px rgba(255,107,0,0.4); width: 100%;
-  }
+  .btn-verify { display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--orange); color: var(--white); text-decoration: none; padding: 16px 28px; border-radius: 8px; font-size: 18px; font-weight: 700; transition: all 0.2s; box-shadow: 0 4px 20px rgba(255,107,0,0.4); width: 100%; }
   .btn-verify:hover { background: var(--orange-dark); transform: translateY(-2px); }
 
   /* SERVICES */
   .services-section { background: var(--dark3); }
   .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
-  .service-card {
-    background: var(--dark2); border: 1px solid rgba(255,255,255,0.07);
-    border-radius: 14px; padding: 32px 24px; text-decoration: none; color: var(--white);
-    transition: all 0.3s; display: flex; flex-direction: column; align-items: flex-start; gap: 14px;
-    position: relative; overflow: hidden;
-  }
+  .service-card { background: var(--dark2); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 32px 24px; text-decoration: none; color: var(--white); transition: all 0.3s; display: flex; flex-direction: column; align-items: flex-start; gap: 14px; position: relative; overflow: hidden; }
   .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--orange); transform: scaleX(0); transition: transform 0.3s; }
   .service-card:hover::before { transform: scaleX(1); }
   .service-card:hover { border-color: rgba(255,107,0,0.3); transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.3); }
@@ -230,37 +174,12 @@
   .contact-number { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--orange); letter-spacing: 3px; margin-top: 20px; display: block; text-decoration: none; }
 
   /* ── FOOTER ── */
-  footer {
-    background: var(--black);
-    border-top: 1px solid rgba(255,107,0,0.2);
-    text-align: center;
-    padding: 32px 20px;
-  }
+  footer { background: var(--black); border-top: 1px solid rgba(255,107,0,0.2); text-align: center; padding: 32px 20px; }
   footer p { color: var(--gray); font-size: 13px; line-height: 1.7; }
   footer strong { color: var(--orange-light); }
-  .footer-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin: 16px 0;
-  }
-  .footer-links a {
-    color: var(--gray);
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 600;
-    padding: 6px 14px;
-    border: 1px solid rgba(255,107,0,0.3);
-    border-radius: 20px;
-    transition: all 0.2s;
-    letter-spacing: 0.5px;
-  }
-  .footer-links a:hover {
-    color: var(--white);
-    border-color: var(--orange);
-    background: rgba(255,107,0,0.1);
-  }
+  .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin: 16px 0; }
+  .footer-links a { color: var(--gray); text-decoration: none; font-size: 13px; font-weight: 600; padding: 6px 14px; border: 1px solid rgba(255,107,0,0.3); border-radius: 20px; transition: all 0.2s; letter-spacing: 0.5px; }
+  .footer-links a:hover { color: var(--white); border-color: var(--orange); background: rgba(255,107,0,0.1); }
   .footer-copy { color: var(--gray); font-size: 12px; margin-top: 12px; }
 
   /* FLOATING */
@@ -272,12 +191,195 @@
   @keyframes pulse-green { 0%,100% { box-shadow: 0 4px 20px rgba(37,211,102,0.5); } 50% { box-shadow: 0 4px 30px rgba(37,211,102,0.85), 0 0 0 10px rgba(37,211,102,0.1); } }
   @keyframes pulse-orange { 0%,100% { box-shadow: 0 4px 20px rgba(255,107,0,0.5); } 50% { box-shadow: 0 4px 30px rgba(255,107,0,0.85), 0 0 0 10px rgba(255,107,0,0.1); } }
 
-  @media (max-width: 600px) {
+  /* ══════════════════════════════════════
+     TYRE SECTION
+  ══════════════════════════════════════ */
+  .tyre-section { background: var(--dark); }
+
+  .tyre-main-card {
+    max-width: 980px; margin: 0 auto;
+    background: linear-gradient(145deg, #161d26, #0e1318);
+    border: 1px solid rgba(255,107,0,0.25);
+    border-radius: 22px; padding: 52px 44px;
+    display: flex; flex-wrap: wrap; gap: 44px; align-items: flex-start;
+    box-shadow: 0 24px 72px rgba(0,0,0,0.55);
+    position: relative; overflow: hidden;
+  }
+  .tyre-main-card::before {
+    content: '🛞'; position: absolute; right: -10px; bottom: -20px;
+    font-size: 180px; opacity: 0.04; line-height: 1; pointer-events: none;
+  }
+
+  .tyre-left { flex: 1; min-width: 260px; }
+
+  .tyre-brand-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+  .brand-pill {
+    background: rgba(255,107,0,0.1); border: 1px solid rgba(255,107,0,0.35);
+    color: var(--orange-light); padding: 5px 14px; border-radius: 50px;
+    font-size: 12px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase;
+  }
+
+  .tyre-left h3 { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 1.5px; margin-bottom: 10px; color: var(--white); }
+  .tyre-left > p { color: var(--gray); font-size: 15px; line-height: 1.65; margin-bottom: 28px; }
+
+  .tyre-features { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 0; }
+  .tyre-feat {
+    display: flex; align-items: center; gap: 9px;
+    font-size: 14px; font-weight: 600; color: var(--light);
+  }
+  .tyre-feat .tf-icon {
+    width: 28px; height: 28px; background: rgba(255,107,0,0.12);
+    border-radius: 6px; display: flex; align-items: center; justify-content: center;
+    font-size: 13px; flex-shrink: 0; color: var(--orange);
+  }
+
+  /* Cashback highlight */
+  .tyre-cashback-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: linear-gradient(135deg, rgba(255,184,0,0.15), rgba(255,107,0,0.1));
+    border: 1px solid rgba(255,184,0,0.45);
+    color: var(--gold); padding: 8px 16px; border-radius: 8px;
+    font-size: 14px; font-weight: 700; letter-spacing: 0.5px;
+    margin-bottom: 22px; width: fit-content;
+  }
+  .tyre-cashback-badge span { font-size: 18px; }
+
+  .tyre-right { flex: 0 0 300px; min-width: 270px; }
+
+  .tyre-cta-box {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,107,0,0.2);
+    border-radius: 16px; padding: 30px 26px;
+  }
+  .cta-box-title { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 1px; margin-bottom: 6px; color: var(--white); }
+  .cta-box-sub { color: var(--gray); font-size: 13px; line-height: 1.5; margin-bottom: 22px; }
+
+  .btn-tyre-wa {
+    display: flex; align-items: center; justify-content: center; gap: 9px;
+    background: var(--green); color: var(--white); text-decoration: none;
+    padding: 15px 20px; border-radius: 10px; font-size: 16px; font-weight: 700;
+    transition: all 0.2s; box-shadow: 0 4px 18px rgba(37,211,102,0.35);
+    margin-bottom: 10px; width: 100%;
+  }
+  .btn-tyre-wa:hover { background: var(--green-dark); transform: translateY(-2px); }
+
+  .btn-tyre-call {
+    display: flex; align-items: center; justify-content: center; gap: 9px;
+    background: transparent; color: var(--white); text-decoration: none;
+    padding: 13px 20px; border-radius: 10px; font-size: 15px; font-weight: 700;
+    border: 1.5px solid rgba(255,255,255,0.18); transition: all 0.2s; width: 100%;
+  }
+  .btn-tyre-call:hover { border-color: var(--orange); color: var(--orange); background: rgba(255,107,0,0.06); }
+
+  .cta-note { text-align: center; margin-top: 14px; font-size: 12px; color: var(--gray); }
+
+  /* ══════════════════════════════════════
+     SERVICE CENTRE SECTION
+  ══════════════════════════════════════ */
+    
+
+  /* Brand logos row */
+  .sc-brands { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 4px; }
+  .sc-brand-pill {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+    color: var(--light); padding: 5px 14px; border-radius: 6px;
+    font-size: 12px; font-weight: 700; letter-spacing: 0.5px;
+  }
+  .sc-brand-pill.highlight { background: rgba(255,107,0,0.1); border-color: rgba(255,107,0,0.3); color: var(--orange-light); }
+
+  .sc-top-right { flex: 0 0 auto; min-width: 220px; display: flex; flex-direction: column; gap: 12px; justify-content: center; }
+
+  /* Cashback badge for service */
+  .sc-cashback-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: linear-gradient(135deg, rgba(255,184,0,0.12), rgba(255,107,0,0.08));
+    border: 1px solid rgba(255,184,0,0.4);
+    color: var(--gold); padding: 8px 14px; border-radius: 8px;
+    font-size: 13px; font-weight: 700; letter-spacing: 0.3px;
+  }
+
+  .sc-benefit-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .sc-benefit-list li { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--light); }
+  .sc-benefit-list li .bi { width: 22px; height: 22px; background: rgba(255,107,0,0.12); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--orange); flex-shrink: 0; }
+
+  /* Divider */
+  .sc-divider { height: 1px; background: rgba(255,255,255,0.06); margin: 0 44px; }
+
+  /* Choice area */
+  .sc-choice-area { padding: 32px 44px 40px; }
+  .sc-choice-label {
+    font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 1.5px;
+    color: var(--gray); margin-bottom: 16px; text-transform: uppercase;
+  }
+
+  .sc-options { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 28px; }
+
+  .sc-option {
+    border: 2px solid rgba(255,255,255,0.08);
+    border-radius: 14px; padding: 20px 18px;
+    cursor: pointer; transition: all 0.2s; position: relative;
+    background: rgba(255,255,255,0.02);
+  }
+  .sc-option:hover { border-color: rgba(255,107,0,0.4); background: rgba(255,107,0,0.04); }
+  .sc-option.active { border-color: var(--orange); background: rgba(255,107,0,0.08); }
+  .sc-option.active::after {
+    content: '✓'; position: absolute; top: 12px; right: 14px;
+    width: 22px; height: 22px; background: var(--orange); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700; color: var(--white);
+    line-height: 22px; text-align: center;
+  }
+  .sc-opt-icon { font-size: 28px; margin-bottom: 8px; }
+  .sc-opt-title { font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 1px; margin-bottom: 4px; color: var(--white); }
+  .sc-opt-desc { font-size: 12px; color: var(--gray); line-height: 1.4; }
+
+  /* Action buttons */
+  .sc-action-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn-sc-wa {
+    flex: 1; min-width: 200px;
+    display: flex; align-items: center; justify-content: center; gap: 9px;
+    background: var(--green); color: var(--white); text-decoration: none;
+    padding: 16px 20px; border-radius: 10px; font-size: 16px; font-weight: 700;
+    transition: all 0.2s; box-shadow: 0 4px 18px rgba(37,211,102,0.3);
+    border: none; cursor: pointer;
+  }
+  .btn-sc-wa:hover { background: var(--green-dark); transform: translateY(-2px); }
+  .btn-sc-call {
+    flex: 0 0 auto;
+    display: flex; align-items: center; justify-content: center; gap: 9px;
+    background: var(--orange); color: var(--white); text-decoration: none;
+    padding: 16px 24px; border-radius: 10px; font-size: 16px; font-weight: 700;
+    transition: all 0.2s; box-shadow: 0 4px 18px rgba(255,107,0,0.3);
+  }
+  .btn-sc-call:hover { background: var(--orange-dark); transform: translateY(-2px); }
+
+  /* Bottom strip */
+  .sc-bottom-strip {
+    background: rgba(255,107,0,0.07); border-top: 1px solid rgba(255,107,0,0.15);
+    padding: 16px 44px;
+    display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: center;
+  }
+  .sc-strip-label { font-size: 11px; color: var(--gray); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; flex: 0 0 auto; }
+  .sc-strip-items { display: flex; flex-wrap: wrap; gap: 8px; }
+  .sc-strip-item { font-size: 12px; font-weight: 700; color: var(--light); background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 4px; }
+
+  /* RESPONSIVE */
+  @media (max-width: 700px) {
     .hero-content { margin: 0 auto; padding: 40px 20px 60px; }
     .verify-card, .trust-card { padding: 28px 20px; }
     .stat-item { min-width: 100px; }
     .step-connector { display: none; }
     .steps-wrap { gap: 8px; }
+    .tyre-main-card { padding: 32px 22px; }
+    .tyre-right { flex: 1 1 100%; }
+    .tyre-features { grid-template-columns: 1fr; }
+    .sc-top { padding: 28px 22px 22px; }
+    .sc-divider { margin: 0 22px; }
+    .sc-choice-area { padding: 24px 22px 30px; }
+    .sc-options { grid-template-columns: 1fr; }
+    .sc-bottom-strip { padding: 14px 22px; }
+    .sc-action-btns { flex-direction: column; }
+    .btn-sc-call { flex: 1; }
   }
 </style>
 </head>
@@ -308,7 +410,7 @@
       <div class="hero-check"><span class="tick">✔</span> Direct Owner Deals</div>
     </div>
     <div class="hero-btns">
-      <a href="https://wa.me/918226897842?text=Hi%20I%20want%20to%20sell%20my%20commercial%20vehicle.%20Please%20guide%20me%20for%20₹100%20verification." class="btn-sell" target="_blank">🟢 Sell Your Vehicle</a>
+      <a href="https://wa.me/918226897842?text=Hi%20I%20want%20to%20sell%20my%20commercial%20vehicle.%20Please%20guide%20me%20for%20₹200%20verification." class="btn-sell" target="_blank">🟢 Sell Your Vehicle</a>
       <a href="https://wa.me/918226897842?text=Hi%20I%20am%20looking%20to%20buy%20a%20commercial%20vehicle.%20Please%20share%20details." class="btn-buy" target="_blank">🔍 Find Vehicles</a>
     </div>
   </div>
@@ -325,13 +427,13 @@
 <!-- VERIFICATION -->
 <section class="verify-section">
   <div class="container">
-    <div class="section-title">₹100 Verification –<br><span>Safe &amp; Genuine Deals</span></div>
+    <div class="section-title">₹200 Verification –<br><span>Safe &amp; Genuine Deals</span></div>
     <p class="section-sub">छोटी सी फीस, बड़ी सुरक्षा – फेक लीड्स से बचें</p>
     <div class="verify-card">
       <div class="verify-left">
-        <div class="price-badge">₹100</div>
+        <div class="price-badge">₹200</div>
         <h3>One-Time Verification Fee</h3>
-        <p>We charge a small ₹100 verification fee to ensure genuine listings and protect buyers from fake leads. Trusted sellers only.</p>
+        <p>We charge a small ₹200 verification fee to ensure genuine listings and protect buyers from fake leads. Trusted sellers only.</p>
       </div>
       <div class="verify-right">
         <ul class="verify-benefits">
@@ -340,7 +442,7 @@
           <li><span class="icon">✓</span> Direct Buyer Leads</li>
           <li><span class="icon">✓</span> WhatsApp Support</li>
         </ul>
-        <a href="https://wa.me/918226897842?text=Hi%20I%20want%20to%20verify%20my%20listing%20for%20₹100." class="btn-verify" target="_blank">🟢 Verify Now – ₹100</a>
+        <a href="https://wa.me/918226897842?text=Hi%20I%20want%20to%20verify%20my%20listing%20for%20₹200." class="btn-verify" target="_blank">🟢 Verify Now – ₹200</a>
       </div>
     </div>
   </div>
@@ -380,6 +482,439 @@
   </div>
 </section>
 
+<!-- ══════════════════════════════════════
+     TYRE BOOKING SECTION
+══════════════════════════════════════ -->
+<section class="tyre-section">
+  <div class="container">
+    <div class="section-title">Commercial Vehicle <span>Tyres</span></div>
+    <p class="section-sub">Top brands, authorized dealers – best price guaranteed with extra cashback & discounts</p>
+
+    <div class="tyre-main-card">
+      <div class="tyre-left">
+
+        <div class="tyre-cashback-badge">
+          <span>🎁</span> Extra Cashback &amp; Discount – Truck Mandi Members Only
+        </div>
+
+        <div class="tyre-brand-row">
+          <span class="brand-pill">Apollo</span>
+          <span class="brand-pill">JK Tyre</span>
+          <span class="brand-pill">MRF</span>
+          <span class="brand-pill">CEAT</span>
+          <span class="brand-pill">Bridgestone</span>
+          <span class="brand-pill">Birla Tyres</span>
+        </div>
+
+        <h3>Authorized Dealers – Genuine Tyres</h3>
+        <p>Sabse acha price, authorized dealerships ke through – UP, Bihar aur Jharkhand mein. HCV, LCV, pickup – har tarah ke commercial vehicle ke liye sahi size available.</p>
+
+        <div class="tyre-features">
+          <div class="tyre-feat"><span class="tf-icon">✓</span> Authorized Dealers Only</div>
+          <div class="tyre-feat"><span class="tf-icon">📦</span> All HCV / LCV Sizes</div>
+          <div class="tyre-feat"><span class="tf-icon">💰</span> Best Price + Cashback</div>
+          <div class="tyre-feat"><span class="tf-icon">⚡</span> Quick Availability Check</div>
+          <div class="tyre-feat"><span class="tf-icon">🔧</span> Fitment Support</div>
+          <div class="tyre-feat"><span class="tf-icon">📍</span> UP · Bihar · Jharkhand</div>
+        </div>
+      </div>
+
+      <div class="tyre-right">
+        <div class="tyre-cta-box">
+          <div class="cta-box-title">📦 Tyre Booking</div>
+          <div class="cta-box-sub">WhatsApp pe message karein – hum best option aur discount wala price batayenge</div>
+          <a
+            href="https://wa.me/918226897842?text=Hi%20Truck%20Mandi!%20%F0%9F%9B%9E%20Mujhe%20commercial%20vehicle%20ke%20liye%20tyre%20chahiye.%20Please%20options%20aur%20price%20batayein."
+            class="btn-tyre-wa"
+            target="_blank"
+          >
+            🟢 Book via WhatsApp
+          </a>
+          <a href="tel:+918226897842" class="btn-tyre-call">
+            📞 Call for Tyre Booking
+          </a>
+          <p class="cta-note">⚡ 30 minute mein response guaranteed</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SERVICE CENTRE BOOKING SECTION
+══════════════════════════════════════ -->
+
+        
+    .service-book-section { background: var(--dark2); }
+
+  .sc-main-card {
+    max-width: 980px; margin: 0 auto;
+    background: linear-gradient(145deg, #181e28, #121820);
+    border: 1px solid rgba(255,107,0,0.2);
+    border-radius: 22px; overflow: hidden;
+    box-shadow: 0 24px 72px rgba(0,0,0,0.5);
+  }
+
+  /* Top info strip */
+  .sc-top { padding: 40px 44px 32px; display: flex; flex-wrap: wrap; gap: 36px; }
+  .sc-top-left { flex: 1; min-width: 260px; }
+  .sc-top-left h3 { font-family: 'Bebas Neue', sans-serif; font-size: 26px; letter-spacing: 1.5px; margin-bottom: 10px; }
+  .sc-top-left p { color: var(--gray); font-size: 15px; line-height: 1.65; margin-bottom: 20px; }
+
+  /* Brand logos row */
+  .sc-brands { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 4px; }
+  .sc-brand-pill {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+    color: var(--light); padding: 5px 14px; border-radius: 6px;
+    font-size: 12px; font-weight: 700; letter-spacing: 0.5px;
+  }
+  .sc-brand-pill.highlight { background: rgba(255,107,0,0.1); border-color: rgba(255,107,0,0.3); color: var(--orange-light); }
+
+  .sc-top-right { flex: 0 0 auto; min-width: 220px; display: flex; flex-direction: column; gap: 12px; justify-content: center; }
+
+  /* Cashback badge for service */
+  .sc-cashback-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: linear-gradient(135deg, rgba(255,184,0,0.12), rgba(255,107,0,0.08));
+    border: 1px solid rgba(255,184,0,0.4);
+    color: var(--gold); padding: 8px 14px; border-radius: 8px;
+    font-size: 13px; font-weight: 700; letter-spacing: 0.3px;
+  }
+
+  .sc-benefit-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .sc-benefit-list li { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--light); }
+  .sc-benefit-list li .bi { width: 22px; height: 22px; background: rgba(255,107,0,0.12); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--orange); flex-shrink: 0; }
+
+  /* Divider */
+  .sc-divider { height: 1px; background: rgba(255,255,255,0.06); margin: 0 44px; }
+
+  /* Choice area */
+  .sc-choice-area { padding: 32px 44px 40px; }
+  .sc-choice-label {
+    font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 1.5px;
+    color: var(--gray); margin-bottom: 16px; text-transform: uppercase;
+  }
+
+  .sc-options { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 28px; }
+
+  .sc-option {
+    border: 2px solid rgba(255,255,255,0.08);
+    border-radius: 14px; padding: 20px 18px;
+    cursor: pointer; transition: all 0.2s; position: relative;
+    background: rgba(255,255,255,0.02);
+  }
+  .sc-option:hover { border-color: rgba(255,107,0,0.4); background: rgba(255,107,0,0.04); }
+  .sc-option.active { border-color: var(--orange); background: rgba(255,107,0,0.08); }
+  .sc-option.active::after {
+    content: '✓'; position: absolute; top: 12px; right: 14px;
+    width: 22px; height: 22px; background: var(--orange); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700; color: var(--white);
+    line-height: 22px; text-align: center;
+  }
+  .sc-opt-icon { font-size: 28px; margin-bottom: 8px; }
+  .sc-opt-title { font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 1px; margin-bottom: 4px; color: var(--white); }
+  .sc-opt-desc { font-size: 12px; color: var(--gray); line-height: 1.4; }
+
+  /* Action buttons */
+  .sc-action-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn-sc-wa {
+    flex: 1; min-width: 200px;
+    display: flex; align-items: center; justify-content: center; gap: 9px;
+    background: var(--green); color: var(--white); text-decoration: none;
+    padding: 16px 20px; border-radius: 10px; font-size: 16px; font-weight: 700;
+    transition: all 0.2s; box-shadow: 0 4px 18px rgba(37,211,102,0.3);
+    border: none; cursor: pointer;
+  }
+  .btn-sc-wa:hover { background: var(--green-dark); transform: translateY(-2px); }
+  .btn-sc-call {
+    flex: 0 0 auto;
+    display: flex; align-items: center; justify-content: center; gap: 9px;
+    background: var(--orange); color: var(--white); text-decoration: none;
+    padding: 16px 24px; border-radius: 10px; font-size: 16px; font-weight: 700;
+    transition: all 0.2s; box-shadow: 0 4px 18px rgba(255,107,0,0.3);
+  }
+  .btn-sc-call:hover { background: var(--orange-dark); transform: translateY(-2px); }
+
+  /* Bottom strip */
+  .sc-bottom-strip {
+    background: rgba(255,107,0,0.07); border-top: 1px solid rgba(255,107,0,0.15);
+    padding: 16px 44px;
+    display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: center;
+  }
+  .sc-strip-label { font-size: 11px; color: var(--gray); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; flex: 0 0 auto; }
+  .sc-strip-items { display: flex; flex-wrap: wrap; gap: 8px; }
+  .sc-strip-item { font-size: 12px; font-weight: 700; color: var(--light); background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 4px; }
+
+  /* RESPONSIVE */
+  @media (max-width: 700px) {
+    .hero-content { margin: 0 auto; padding: 40px 20px 60px; }
+    .verify-card, .trust-card { padding: 28px 20px; }
+    .stat-item { min-width: 100px; }
+    .step-connector { display: none; }
+    .steps-wrap { gap: 8px; }
+    .tyre-main-card { padding: 32px 22px; }
+    .tyre-right { flex: 1 1 100%; }
+    .tyre-features { grid-template-columns: 1fr; }
+    .sc-top { padding: 28px 22px 22px; }
+    .sc-divider { margin: 0 22px; }
+    .sc-choice-area { padding: 24px 22px 30px; }
+    .sc-options { grid-template-columns: 1fr; }
+    .sc-bottom-strip { padding: 14px 22px; }
+    .sc-action-btns { flex-direction: column; }
+    .btn-sc-call { flex: 1; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo-wrap">
+    <div class="logo-icon">🚛</div>
+    <div class="logo-text">
+      <div class="brand">TRUCK <span>MANDI</span></div>
+      <div class="sub">Commercial Vehicle Marketplace</div>
+    </div>
+  </div>
+  <a href="tel:+918226897842" class="nav-call">📞 Call Now</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🏆 India's Trusted Marketplace</div>
+    <h1>Buy &amp; Sell<br><span>Commercial</span><br>Vehicles</h1>
+    <p class="hero-sub">Trucks, Pickups &amp; Commercial Vehicles – One Platform, All Over India</p>
+    <div class="hero-checks">
+      <div class="hero-check"><span class="tick">✔</span> All India Service</div>
+      <div class="hero-check"><span class="tick">✔</span> Verified Buyers &amp; Sellers</div>
+      <div class="hero-check"><span class="tick">✔</span> Direct Owner Deals</div>
+    </div>
+    <div class="hero-btns">
+      <a href="https://wa.me/918226897842?text=Hi%20I%20want%20to%20sell%20my%20commercial%20vehicle.%20Please%20guide%20me%20for%20₹200%20verification." class="btn-sell" target="_blank">🟢 Sell Your Vehicle</a>
+      <a href="https://wa.me/918226897842?text=Hi%20I%20am%20looking%20to%20buy%20a%20commercial%20vehicle.%20Please%20share%20details." class="btn-buy" target="_blank">🔍 Find Vehicles</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat-item"><div class="stat-num">500+</div><div class="stat-label">Vehicles Listed</div></div>
+  <div class="stat-item"><div class="stat-num">28+</div><div class="stat-label">States Covered</div></div>
+  <div class="stat-item"><div class="stat-num">1000+</div><div class="stat-label">Happy Customers</div></div>
+  <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Verified Deals</div></div>
+</div>
+
+<!-- VERIFICATION -->
+<section class="verify-section">
+  <div class="container">
+    <div class="section-title">₹200 Verification –<br><span>Safe &amp; Genuine Deals</span></div>
+    <p class="section-sub">छोटी सी फीस, बड़ी सुरक्षा – फेक लीड्स से बचें</p>
+    <div class="verify-card">
+      <div class="verify-left">
+        <div class="price-badge">₹200</div>
+        <h3>One-Time Verification Fee</h3>
+        <p>We charge a small ₹200 verification fee to ensure genuine listings and protect buyers from fake leads. Trusted sellers only.</p>
+      </div>
+      <div class="verify-right">
+        <ul class="verify-benefits">
+          <li><span class="icon">✓</span> Verified Seller Badge</li>
+          <li><span class="icon">✓</span> Priority Listing</li>
+          <li><span class="icon">✓</span> Direct Buyer Leads</li>
+          <li><span class="icon">✓</span> WhatsApp Support</li>
+        </ul>
+        <a href="https://wa.me/918226897842?text=Hi%20I%20want%20to%20verify%20my%20listing%20for%20₹200." class="btn-verify" target="_blank">🟢 Verify Now – ₹200</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-section">
+  <div class="container">
+    <div class="section-title">Our <span>Services</span></div>
+    <p class="section-sub">Everything you need to buy or sell commercial vehicles</p>
+    <div class="services-grid">
+      <a href="https://wa.me/918226897842?text=Hi%20I%20want%20to%20sell%20my%20truck." class="service-card" target="_blank">
+        <div class="service-icon">🚛</div>
+        <h3>Sell Your Truck</h3>
+        <p>List your commercial vehicle and get genuine buyers directly on WhatsApp.</p>
+        <span class="service-arrow">→</span>
+      </a>
+      <a href="https://wa.me/918226897842?text=Hi%20I%20am%20looking%20to%20buy%20a%20truck." class="service-card" target="_blank">
+        <div class="service-icon">🔍</div>
+        <h3>Buy a Truck</h3>
+        <p>Find verified second-hand trucks from trusted sellers across India.</p>
+        <span class="service-arrow">→</span>
+      </a>
+      <a href="https://wa.me/918226897842?text=Hi%20I%20need%20truck%20finance." class="service-card" target="_blank">
+        <div class="service-icon">🏦</div>
+        <h3>Vehicle Finance</h3>
+        <p>Get easy loan options for commercial vehicle purchase through our NBFC partners.</p>
+        <span class="service-arrow">→</span>
+      </a>
+      <a href="https://wa.me/918226897842?text=Hi%20I%20need%20truck%20insurance." class="service-card" target="_blank">
+        <div class="service-icon">🛡️</div>
+        <h3>Insurance</h3>
+        <p>Compare and get best insurance deals for your commercial vehicle.</p>
+        <span class="service-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     TYRE BOOKING SECTION
+══════════════════════════════════════ -->
+<section class="tyre-section">
+  <div class="container">
+    <div class="section-title">Commercial Vehicle <span>Tyres</span></div>
+    <p class="section-sub">Top brands, authorized dealers – best price guaranteed with extra cashback & discounts</p>
+
+    <div class="tyre-main-card">
+      <div class="tyre-left">
+
+        <div class="tyre-cashback-badge">
+          <span>🎁</span> Extra Cashback &amp; Discount – Truck Mandi Members Only
+        </div>
+
+        <div class="tyre-brand-row">
+          <span class="brand-pill">Apollo</span>
+          <span class="brand-pill">JK Tyre</span>
+          <span class="brand-pill">MRF</span>
+          <span class="brand-pill">CEAT</span>
+          <span class="brand-pill">Bridgestone</span>
+          <span class="brand-pill">Birla Tyres</span>
+        </div>
+
+        <h3>Authorized Dealers – Genuine Tyres</h3>
+        <p>Sabse acha price, authorized dealerships ke through – UP, Bihar aur Jharkhand mein. HCV, LCV, pickup – har tarah ke commercial vehicle ke liye sahi size available.</p>
+
+        <div class="tyre-features">
+          <div class="tyre-feat"><span class="tf-icon">✓</span> Authorized Dealers Only</div>
+          <div class="tyre-feat"><span class="tf-icon">📦</span> All HCV / LCV Sizes</div>
+          <div class="tyre-feat"><span class="tf-icon">💰</span> Best Price + Cashback</div>
+          <div class="tyre-feat"><span class="tf-icon">⚡</span> Quick Availability Check</div>
+          <div class="tyre-feat"><span class="tf-icon">🔧</span> Fitment Support</div>
+          <div class="tyre-feat"><span class="tf-icon">📍</span> UP · Bihar · Jharkhand</div>
+        </div>
+      </div>
+
+      <div class="tyre-right">
+        <div class="tyre-cta-box">
+          <div class="cta-box-title">📦 Tyre Booking</div>
+          <div class="cta-box-sub">WhatsApp pe message karein – hum best option aur discount wala price batayenge</div>
+          <a
+            href="https://wa.me/918226897842?text=Hi%20Truck%20Mandi!%20%F0%9F%9B%9E%20Mujhe%20commercial%20vehicle%20ke%20liye%20tyre%20chahiye.%20Please%20options%20aur%20price%20batayein."
+            class="btn-tyre-wa"
+            target="_blank"
+          >
+            🟢 Book via WhatsApp
+          </a>
+          <a href="tel:+918226897842" class="btn-tyre-call">
+            📞 Call for Tyre Booking
+          </a>
+          <p class="cta-note">⚡ 30 minute mein response guaranteed</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SERVICE CENTRE BOOKING SECTION
+══════════════════════════════════════ -->
+<section class="service-book-section">
+  <div class="container">
+    <div class="section-title">Vehicle Service <span>&amp; Repair</span></div>
+    <p class="section-sub">Authorized brand centres ya trusted local workshops – aap choose karo, hum book karenge</p>
+
+    <div class="sc-main-card">
+
+      <div class="sc-top">
+        <div class="sc-top-left">
+          <h3>All Makes &amp; Models Accepted</h3>
+          <p>Chahe aapka vehicle kisi bhi brand ka ho – hum aapke liye nearest aur best service option book karenge. Authorized centres aur local trusted workshops dono available hain.</p>
+
+          <div style="margin-bottom:10px">
+            <div style="font-size:12px;color:var(--gray);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">Authorized Brands</div>
+            <div class="sc-brands">
+              <span class="sc-brand-pill highlight">Tata Motors</span>
+              <span class="sc-brand-pill highlight">Ashok Leyland</span>
+              <span class="sc-brand-pill highlight">Eicher</span>
+              <span class="sc-brand-pill highlight">Mahindra</span>
+              <span class="sc-brand-pill highlight">BharatBenz</span>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:12px;color:var(--gray);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">Local Workshops</div>
+            <div class="sc-brands">
+              <span class="sc-brand-pill">All Brands</span>
+              <span class="sc-brand-pill">Engine Repair</span>
+              <span class="sc-brand-pill">Body Work</span>
+              <span class="sc-brand-pill">Electrical</span>
+              <span class="sc-brand-pill">Tyre Fitting</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sc-top-right">
+          <div class="sc-cashback-badge">
+            🎁 Extra Discount on Booking via Truck Mandi
+          </div>
+          <ul class="sc-benefit-list">
+            <li><span class="bi">✓</span> Genuine Parts Guaranteed</li>
+            <li><span class="bi">✓</span> Trained Technicians</li>
+            <li><span class="bi">✓</span> Same Day Booking</li>
+            <li><span class="bi">✓</span> WhatsApp Status Updates</li>
+            <li><span class="bi">✓</span> UP · Bihar · Jharkhand</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sc-divider"></div>
+
+      <div class="sc-choice-area">
+        <div class="sc-choice-label">Service Type Choose Karein</div>
+
+        <div class="sc-options">
+          <div class="sc-option active" id="opt-authorized" onclick="selectOption('authorized')">
+            <div class="sc-opt-icon">🏭</div>
+            <div class="sc-opt-title">Authorized Centre</div>
+            <div class="sc-opt-desc">Tata, Ashok Leyland, Eicher, Mahindra – manufacturer authorized workshop, genuine parts</div>
+          </div>
+          <div class="sc-option" id="opt-local" onclick="selectOption('local')">
+            <div class="sc-opt-icon">🔧</div>
+            <div class="sc-opt-title">Local Workshop</div>
+            <div class="sc-opt-desc">Trusted local mechanics – fast, affordable, all brands accepted</div>
+          </div>
+        </div>
+
+        <div class="sc-action-btns">
+          <a id="btn-wa-service" href="https://wa.me/918226897842?text=Hi%20Truck%20Mandi!%20%F0%9F"
+            class="btn-sc-wa" target="_blank" onclick="return handleWAClick(event)">
+            🟢 Book Service – WhatsApp
+          </a>
+          <a href="tel:+918226897842" class="btn-sc-call">📞 Call Now</a>
+        </div>
+      </div>
+
+      <div class="sc-bottom-strip">
+        <span class="sc-strip-label">Coverage:</span>
+        <div class="sc-strip-items">
+          <span class="sc-strip-item">🚛 All HCV / LCV / Pickup</span>
+          <span class="sc-strip-item">📍 UP · Bihar · Jharkhand</span>
+          <span class="sc-strip-item">⚡ Same Day Booking</span>
+          <span class="sc-strip-item">💬 WhatsApp Updates</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- HOW IT WORKS -->
 <section class="how-section">
   <div class="container">
@@ -395,8 +930,8 @@
       <div class="step">
         <div class="step-num">2</div>
         <div class="step-connector"></div>
-        <h4>Verify & List</h4>
-        <p>Pay ₹100 verification fee. Your listing goes live immediately.</p>
+        <h4>Verify &amp; List</h4>
+        <p>Pay ₹200 verification fee. Your listing goes live immediately.</p>
       </div>
       <div class="step">
         <div class="step-num">3</div>
@@ -490,5 +1025,30 @@
   <a href="tel:+918226897842" class="float-call">📞</a>
 </div>
 
+<script>
+  // Service centre option selection + dynamic WhatsApp message
+  var currentOption = 'authorized';
+
+  var messages = {
+    authorized: 'Hi%20Truck%20Mandi!%20%F0%9F%94%A7%20Mujhe%20AUTHORIZED%20service%20centre%20mein%20apni%20commercial%20vehicle%20ki%20service%20book%20karni%20hai.%20Please%20help%20karein.',
+    local: 'Hi%20Truck%20Mandi!%20%F0%9F"4%A7%20Mujhe%20LOCAL%20workshop%20mein%20apni%20commercial%20vehicle%20ki%20repair%20ya%20service%20book%20karni%20hai.%20Please%20help%20karein.'
+  };
+
+  function selectOption(type) {
+    currentOption = type;
+    document.getElementById('opt-authorized').classList.toggle('active', type === 'authorized');
+    document.getElementById('opt-local').classList.toggle('active', type === 'local');
+  }
+
+  function handleWAClick(e) {
+    e.preventDefault();
+    var msg = currentOption === 'authorized'
+      ? 'Hi%20Truck%20Mandi!%20%F0%9F%94%A7%20Mujhe%20AUTHORIZED%20service%20centre%20mein%20commercial%20vehicle%20ki%20service%20book%20karni%20hai.%20Please%20help%20karein.'
+      : 'Hi%20Truck%20Mandi!%20%F0%9F%94%A7%20Mujhe%20LOCAL%20workshop%20mein%20commercial%20vehicle%20ki%20repair%20ya%20service%20book%20karni%20hai.%20Please%20help%20karein.';
+    window.open('https://wa.me/918226897842?text=' + msg, '_blank');
+    return false;
+  }
+</script> 
+
 </body>
-</html> 
+</html>
